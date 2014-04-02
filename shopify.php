@@ -1,5 +1,6 @@
 <?php
 
+	$shopify_app_version = "1.0.0";
 
 	function shopify_app_install_url($shop_domain, $api_key)
 	{
@@ -70,7 +71,7 @@
 				curl_setopt($ch, CURLOPT_MAXREDIRS, 3);
 				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 				curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
-				curl_setopt($ch, CURLOPT_USERAGENT, 'HAC');
+				curl_setopt($ch, CURLOPT_USERAGENT, "ShopifyPHP-LegacyAuth-v{$shopify_app_version}");
 				curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
 				curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 
